@@ -13,18 +13,12 @@
 			padding: 0;
 			text-align: center;
 			background-color: black;
-			display: flex;
 		}
 
 		#canvas {
-			/* THE IMPORTANT STUFF! */
 			display: block;
-			position: absolute;
-			top: 0; bottom: 0; left: 0; right: 0;
-			margin: auto;
+			margin: 0;
 			color: white;
-			width: 1024;
-			height: 600;
 		}
 
 		#canvas:focus {
@@ -169,7 +163,6 @@
 			requestAnimationFrame(animate);
 
 			function adjustCanvasDimensions() {
-				/*
 				var scale = window.devicePixelRatio || 1;
 				var width = window.innerWidth;
 				var height = window.innerHeight;
@@ -177,7 +170,6 @@
 				canvas.height = height * scale;
 				canvas.style.width = width + "px";
 				canvas.style.height = height + "px";
-				*/
 			}
 			animationCallbacks.push(adjustCanvasDimensions);
 			adjustCanvasDimensions();
